@@ -4,18 +4,6 @@
 
 import unittest
 
-"""
-Was confused about the type of inputs to be expected float or int in order to do a type check for invalid inputs 
-How to check for invalid triangle 
-Check for floating point precision
-Should i test for good and bad route?
-What should be printed in the text file/report 
-Type of input
-Type of output to equate 
-File distribution
-Design of the funciton 
-"""
-
 
 def classify_triangle(a, b, c) -> str:
 
