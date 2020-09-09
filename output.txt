@@ -1,0 +1,12 @@
+Input --> a = 5.00002, b = 5.00004, c = 5.0007 
+This is an equilateral Triangle 
+Input --> a = 5.00002, b = 5.00004, c = 4.0007 
+This is an isosceles Triangle 
+Input --> a = -1.0, b = 2.0, c = 3.0 
+Length of sides cannot be negative 
+Input --> a = 4.0, b = 5.0, c = 3.0 
+This is a right angle Triangle 
+Input --> a = A, b = 1.0, c = 2.0 
+length of sides should be of type float 
+Input --> a = 5.0, b = 2.0, c = 2.0 
+This is not a valid Triangle 
