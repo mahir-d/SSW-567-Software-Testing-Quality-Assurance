@@ -1,5 +1,9 @@
+# HW01
+# Name: Mahir Dhall
+#CWID: 10445966
+
 import unittest
-# from classifyTriangle import classify_triangle
+
 """
 Was confused about the type of inputs to be expected float or int in order to do a type check for invalid inputs 
 How to check for invalid triangle 
@@ -14,8 +18,10 @@ Design of the funciton
 
 
 def classify_triangle(a, b, c) -> str:
+
     f = open("output.txt", "a")
     f.write(f"Input --> a = {a}, b = {b}, c = {c} \n")
+
     # Checks for data type of the lengths
     if type(a) != float or type(b) != float or type(c) != float:
         f.write("length of sides should be of type float \n")
@@ -39,21 +45,25 @@ def classify_triangle(a, b, c) -> str:
         f.close()
         return "This is not a valid Triangle"
 
+    # Checks for equilateral triangle
     if a == b == c:
         f.write("This is an equilateral Triangle \n")
         f.close()
         return "This is an equilateral Triangle"
 
+    # Checks for isosceles triangle
     if a == b or a == c or b == c:
         f.write("This is an isosceles Triangle \n")
         f.close()
         return "This is an isosceles Triangle"
 
+    # Checks for right angle triangle
     if a*a + b*b == c*c or a*a + c*c == b*b or b*b + c*c == a*a:
         f.write("This is a right angle Triangle \n")
         f.close()
         return "This is a right angle Triangle"
 
+    # If nothing else than classifys it as a scalene triangle
     f.write("This is a scalene Trianlge \n")
     f.close()
     return "This is a scalene Trianlge"
@@ -102,6 +112,11 @@ class TriangleTest(unittest.TestCase):
         """ ~~Test to check correct classification of right angle triangle~ """
         self.assertEqual(value,
                          "This is a right angle Triangle")
+
+    def test_scalene(self):
+        value = classify_triangle(7.0, 12.00, 15.006)
+        """ ~Test to check correct classification of a scalene triangle~ """
+        self.assertEqual(value, "This is a scalene Trianlge")
 
 
 if __name__ == '__main__':
